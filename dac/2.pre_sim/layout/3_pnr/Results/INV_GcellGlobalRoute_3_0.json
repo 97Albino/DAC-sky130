@@ -1,0 +1,162 @@
+{
+    "wires": [
+        {
+            "connected_pins": [
+                {
+                    "layer": "M2",
+                    "rect": [
+                        5680,
+                        13160,
+                        8080,
+                        13720
+                    ],
+                    "sink_name": "X_XM1/B"
+                }
+            ],
+            "layer": "M2",
+            "net_name": "N_BODY",
+            "rect": [
+                5160,
+                52920,
+                5160,
+                52920
+            ],
+            "width": 15120
+        },
+        {
+            "connected_pins": [
+                {
+                    "layer": "M2",
+                    "rect": [
+                        5680,
+                        560,
+                        8080,
+                        1120
+                    ],
+                    "sink_name": "X_XM1/D"
+                },
+                {
+                    "layer": "M2",
+                    "rect": [
+                        2240,
+                        560,
+                        4640,
+                        1120
+                    ],
+                    "sink_name": "X_XM2/D"
+                }
+            ],
+            "layer": "M2",
+            "net_name": "OUT",
+            "rect": [
+                5160,
+                52920,
+                5160,
+                52920
+            ],
+            "width": 15120
+        },
+        {
+            "connected_pins": [
+                {
+                    "layer": "M2",
+                    "rect": [
+                        5680,
+                        8960,
+                        8080,
+                        9520
+                    ],
+                    "sink_name": "X_XM1/G"
+                },
+                {
+                    "layer": "M2",
+                    "rect": [
+                        2240,
+                        8960,
+                        4640,
+                        9520
+                    ],
+                    "sink_name": "X_XM2/G"
+                }
+            ],
+            "layer": "M2",
+            "net_name": "IN",
+            "rect": [
+                5160,
+                52920,
+                5160,
+                52920
+            ],
+            "width": 15120
+        },
+        {
+            "connected_pins": [
+                {
+                    "layer": "M2",
+                    "rect": [
+                        6540,
+                        1400,
+                        8940,
+                        1960
+                    ],
+                    "sink_name": "X_XM1/S"
+                }
+            ],
+            "layer": "M2",
+            "net_name": "VSS",
+            "rect": [
+                5160,
+                52920,
+                5160,
+                52920
+            ],
+            "width": 15120
+        },
+        {
+            "connected_pins": [
+                {
+                    "layer": "M2",
+                    "rect": [
+                        2240,
+                        13160,
+                        4640,
+                        13720
+                    ],
+                    "sink_name": "X_XM2/B"
+                }
+            ],
+            "layer": "M2",
+            "net_name": "P_BODY",
+            "rect": [
+                5160,
+                52920,
+                5160,
+                52920
+            ],
+            "width": 15120
+        },
+        {
+            "connected_pins": [
+                {
+                    "layer": "M2",
+                    "rect": [
+                        1380,
+                        1400,
+                        3780,
+                        1960
+                    ],
+                    "sink_name": "X_XM2/S"
+                }
+            ],
+            "layer": "M2",
+            "net_name": "VDD",
+            "rect": [
+                5160,
+                52920,
+                5160,
+                52920
+            ],
+            "width": 15120
+        }
+    ]
+}

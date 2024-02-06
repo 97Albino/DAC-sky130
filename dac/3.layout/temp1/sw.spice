@@ -1,0 +1,21 @@
+* NGSPICE file created from sw.ext - technology: sky130B
+
+.subckt sky130_fd_pr__pfet_01v8_XPYSY6 w_n246_n319# a_n50_n197# a_50_n100# a_n108_n100#
+X0 a_50_n100# a_n50_n197# a_n108_n100# w_n246_n319# sky130_fd_pr__pfet_01v8 ad=0.29 pd=2.58 as=0.29 ps=2.58 w=1 l=0.5
+.ends
+
+.subckt sky130_fd_pr__nfet_01v8_ZFH27D a_50_n42# a_n210_n216# a_n108_n42# a_n50_n130#
+X0 a_50_n42# a_n50_n130# a_n108_n42# a_n210_n216# sky130_fd_pr__nfet_01v8 ad=0.122 pd=1.42 as=0.122 ps=1.42 w=0.42 l=0.5
+.ends
+
+.subckt sw vdd vss din vin1 vin2 vout
+XXM1 XM4/w_n246_n319# din m1_992_178# vdd sky130_fd_pr__pfet_01v8_XPYSY6
+XXM2 XM4/w_n246_n319# m1_992_178# vout vdd sky130_fd_pr__pfet_01v8_XPYSY6
+XXM3 XM4/w_n246_n319# m1_992_178# vout vin1 sky130_fd_pr__pfet_01v8_XPYSY6
+XXM4 XM4/w_n246_n319# m1_1378_178# vin2 vout sky130_fd_pr__pfet_01v8_XPYSY6
+XXM5 m1_992_178# VSUBS vss din sky130_fd_pr__nfet_01v8_ZFH27D
+XXM6 vout VSUBS vss m1_992_178# sky130_fd_pr__nfet_01v8_ZFH27D
+XXM7 vout VSUBS vin2 m1_992_178# sky130_fd_pr__nfet_01v8_ZFH27D
+XXM8 vin1 VSUBS vout m1_1378_178# sky130_fd_pr__nfet_01v8_ZFH27D
+.ends
+

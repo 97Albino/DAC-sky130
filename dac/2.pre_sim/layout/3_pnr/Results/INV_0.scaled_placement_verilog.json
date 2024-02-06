@@ -1,0 +1,191 @@
+{
+  "global_signals": [],
+  "leaves": [
+    {
+      "abstract_name": "NMOS_4T_9061234_X1_Y1",
+      "bbox": [
+        0,
+        0,
+        2580,
+        7560
+      ],
+      "concrete_name": "NMOS_4T_9061234_X1_Y1",
+      "terminals": [
+        {
+          "name": "B",
+          "rect": [
+            260,
+            6580,
+            1460,
+            6860
+          ]
+        },
+        {
+          "name": "D",
+          "rect": [
+            260,
+            280,
+            1460,
+            560
+          ]
+        },
+        {
+          "name": "G",
+          "rect": [
+            260,
+            4480,
+            1460,
+            4760
+          ]
+        },
+        {
+          "name": "S",
+          "rect": [
+            690,
+            700,
+            1890,
+            980
+          ]
+        }
+      ]
+    },
+    {
+      "abstract_name": "PMOS_4T_30119592_X1_Y1",
+      "bbox": [
+        0,
+        0,
+        2580,
+        7560
+      ],
+      "concrete_name": "PMOS_4T_30119592_X1_Y1",
+      "terminals": [
+        {
+          "name": "B",
+          "rect": [
+            260,
+            6580,
+            1460,
+            6860
+          ]
+        },
+        {
+          "name": "D",
+          "rect": [
+            260,
+            280,
+            1460,
+            560
+          ]
+        },
+        {
+          "name": "G",
+          "rect": [
+            260,
+            4480,
+            1460,
+            4760
+          ]
+        },
+        {
+          "name": "S",
+          "rect": [
+            690,
+            700,
+            1890,
+            980
+          ]
+        }
+      ]
+    }
+  ],
+  "modules": [
+    {
+      "abstract_name": "INV",
+      "bbox": [
+        0,
+        0,
+        5160,
+        7560
+      ],
+      "concrete_name": "INV_0",
+      "constraints": [
+        {
+          "constraint": "PowerPorts",
+          "ports": [
+            "VSS",
+            "N_BODY"
+          ],
+          "propagate": true
+        }
+      ],
+      "instances": [
+        {
+          "abstract_template_name": "NMOS_4T_9061234_X1_Y1",
+          "concrete_template_name": "NMOS_4T_9061234_X1_Y1",
+          "fa_map": [
+            {
+              "actual": "N_BODY",
+              "formal": "B"
+            },
+            {
+              "actual": "OUT",
+              "formal": "D"
+            },
+            {
+              "actual": "IN",
+              "formal": "G"
+            },
+            {
+              "actual": "VSS",
+              "formal": "S"
+            }
+          ],
+          "instance_name": "X_XM1",
+          "transformation": {
+            "oX": 2580,
+            "oY": 0,
+            "sX": 1,
+            "sY": 1
+          }
+        },
+        {
+          "abstract_template_name": "PMOS_4T_30119592_X1_Y1",
+          "concrete_template_name": "PMOS_4T_30119592_X1_Y1",
+          "fa_map": [
+            {
+              "actual": "P_BODY",
+              "formal": "B"
+            },
+            {
+              "actual": "OUT",
+              "formal": "D"
+            },
+            {
+              "actual": "IN",
+              "formal": "G"
+            },
+            {
+              "actual": "VDD",
+              "formal": "S"
+            }
+          ],
+          "instance_name": "X_XM2",
+          "transformation": {
+            "oX": 2580,
+            "oY": 0,
+            "sX": -1,
+            "sY": 1
+          }
+        }
+      ],
+      "parameters": [
+        "OUT",
+        "IN",
+        "VDD",
+        "VSS",
+        "P_BODY",
+        "N_BODY"
+      ]
+    }
+  ]
+}

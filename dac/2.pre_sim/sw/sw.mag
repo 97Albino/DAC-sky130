@@ -1,0 +1,41 @@
+magic
+tech sky130B
+magscale 1 2
+timestamp 1687269714
+<< checkpaint >>
+rect -1260 -660 2988 4911
+rect -1260 -2860 1460 -660
+<< metal1 >>
+rect 0 0 200 200
+rect 0 -400 200 -200
+rect 0 -800 200 -600
+rect 0 -1200 200 -1000
+rect 0 -1600 200 -1400
+use inv  X1
+timestamp 1687269714
+transform 1 0 53 0 1 2600
+box -53 -2000 379 1051
+use inv  X2
+timestamp 1687269714
+transform 1 0 485 0 1 2600
+box -53 -2000 379 1051
+use inv  X3
+timestamp 1687269714
+transform 1 0 917 0 1 2600
+box -53 -2000 379 1051
+use inv  X4
+timestamp 1687269714
+transform 1 0 1349 0 1 2600
+box -53 -2000 379 1051
+<< labels >>
+flabel metal1 0 0 200 200 0 FreeSans 256 0 0 0 vdd
+port 0 nsew
+flabel metal1 0 -400 200 -200 0 FreeSans 256 0 0 0 digital_input
+port 1 nsew
+flabel metal1 0 -800 200 -600 0 FreeSans 256 0 0 0 vin1
+port 2 nsew
+flabel metal1 0 -1200 200 -1000 0 FreeSans 256 0 0 0 vin2
+port 3 nsew
+flabel metal1 0 -1600 200 -1400 0 FreeSans 256 0 0 0 vout
+port 4 nsew
+<< end >>

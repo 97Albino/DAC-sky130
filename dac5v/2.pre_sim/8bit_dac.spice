@@ -1,0 +1,178 @@
+** sch_path: /home/97ms/uci/ip/dac5v/1.schematics/8bit_dac.sch
+**.subckt 8bit_dac vdd vss vrefh vrefl d0 d1 d2 d3 d4 d5 d6 d7 vout
+*.iopin vdd
+*.iopin vss
+*.iopin vrefh
+*.iopin vrefl
+*.iopin d0
+*.iopin d1
+*.iopin d2
+*.iopin d3
+*.iopin d4
+*.iopin d5
+*.iopin d6
+*.iopin d7
+*.iopin vout
+X1 vdd vss vrefh net3 d0 d1 d2 d3 d4 d5 d6 net2 7bit_dac
+X2 vdd vss net3 vrefl d0 d1 d2 d3 d4 d5 d6 net1 7bit_dac
+X3 vdd vss d7 net2 net1 vout sw
+**.ends
+
+* expanding   symbol:  /home/97ms/uci/ip/dac5v/1.schematics/7bit_dac.sym # of pins=12
+** sym_path: /home/97ms/uci/ip/dac5v/1.schematics/7bit_dac.sym
+** sch_path: /home/97ms/uci/ip/dac5v/1.schematics/7bit_dac.sch
+.subckt 7bit_dac  vdd vss vrefh vrefl d0 d1 d2 d3 d4 d5 d6 vout
+*.iopin vdd
+*.iopin vss
+*.iopin vrefh
+*.iopin vrefl
+*.iopin d0
+*.iopin d1
+*.iopin d2
+*.iopin d3
+*.iopin d4
+*.iopin d5
+*.iopin d6
+*.iopin vout
+X1 vdd vss vrefh net3 d0 d1 d2 d3 d4 d5 net1 6bit_dac
+X2 vdd vss net3 vrefl d0 d1 d2 d3 d4 d5 net2 6bit_dac
+X3 vdd vss d6 net1 net2 vout sw
+.ends
+
+
+* expanding   symbol:  /home/97ms/uci/ip/dac5v/1.schematics/sw.sym # of pins=6
+** sym_path: /home/97ms/uci/ip/dac5v/1.schematics/sw.sym
+** sch_path: /home/97ms/uci/ip/dac5v/1.schematics/sw.sch
+.subckt sw  vdd vss din vin1 vin2 vout
+*.iopin vdd
+*.iopin vss
+*.iopin din
+*.iopin vin1
+*.iopin vin2
+*.iopin vout
+XM2 net2 net1 vdd vdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM1 net1 din vdd vdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM3 vout net1 vin1 vdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM4 vin2 net2 vout vdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM5 net1 din vss vss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
++ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
++ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1
+XM6 net2 net1 vss vss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
++ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
++ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1
+XM7 vout net1 vin2 vss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
++ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
++ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1
+XM8 vin1 net2 vout vss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
++ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
++ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1
+.ends
+
+
+* expanding   symbol:  /home/97ms/uci/ip/dac5v/1.schematics/6bit_dac.sym # of pins=11
+** sym_path: /home/97ms/uci/ip/dac5v/1.schematics/6bit_dac.sym
+** sch_path: /home/97ms/uci/ip/dac5v/1.schematics/6bit_dac.sch
+.subckt 6bit_dac  vdd vss vrefh vrefl d0 d1 d2 d3 d4 d5 vout
+*.iopin vdd
+*.iopin vss
+*.iopin vrefh
+*.iopin vrefl
+*.iopin d0
+*.iopin d1
+*.iopin d2
+*.iopin d3
+*.iopin d4
+*.iopin d5
+*.iopin vout
+X1 vdd vrefh vss net1 d0 d1 d2 d3 d4 net2 5bit_dac
+X2 vdd net1 vss vrefl d0 d1 d2 d3 d4 net3 5bit_dac
+X3 vdd vss d5 net2 net3 vout sw
+.ends
+
+
+* expanding   symbol:  /home/97ms/uci/ip/dac5v/1.schematics/5bit_dac.sym # of pins=10
+** sym_path: /home/97ms/uci/ip/dac5v/1.schematics/5bit_dac.sym
+** sch_path: /home/97ms/uci/ip/dac5v/1.schematics/5bit_dac.sch
+.subckt 5bit_dac  vdd vrefh vss vrefl d0 d1 d2 d3 d4 vout
+*.iopin vdd
+*.iopin vss
+*.iopin vrefh
+*.iopin vrefl
+*.iopin d0
+*.iopin d1
+*.iopin d2
+*.iopin d3
+*.iopin d4
+*.iopin vout
+X1 vdd vss vrefh net1 d0 d1 d2 d3 net2 4bit_dac
+X2 vdd vss net1 vrefl d0 d1 d2 d3 net3 4bit_dac
+X3 vdd vss d4 net2 net3 vout sw
+.ends
+
+
+* expanding   symbol:  /home/97ms/uci/ip/dac5v/1.schematics/4bit_dac.sym # of pins=9
+** sym_path: /home/97ms/uci/ip/dac5v/1.schematics/4bit_dac.sym
+** sch_path: /home/97ms/uci/ip/dac5v/1.schematics/4bit_dac.sch
+.subckt 4bit_dac  vdd vss vrefh vrefl d0 d1 d2 d3 vout
+*.iopin vdd
+*.iopin vss
+*.iopin vrefh
+*.iopin vrefl
+*.iopin d0
+*.iopin d1
+*.iopin d2
+*.iopin d3
+*.iopin vout
+X1 vdd vss vrefh net2 d0 d1 d2 net1 3bit_dac
+X2 vdd vss net2 vrefl d0 d1 d2 net3 3bit_dac
+X3 vdd vss d3 net1 net3 vout sw
+.ends
+
+
+* expanding   symbol:  /home/97ms/uci/ip/dac5v/1.schematics/3bit_dac.sym # of pins=8
+** sym_path: /home/97ms/uci/ip/dac5v/1.schematics/3bit_dac.sym
+** sch_path: /home/97ms/uci/ip/dac5v/1.schematics/3bit_dac.sch
+.subckt 3bit_dac  vdd vss vrefh vrefl d0 d1 d2 vout
+*.iopin vdd
+*.iopin vss
+*.iopin vrefh
+*.iopin vrefl
+*.iopin d0
+*.iopin d1
+*.iopin d2
+*.iopin vout
+X1 vdd vss vrefh net3 d0 d1 net1 2bit_dac
+X2 vdd vss net3 vrefl d0 d1 net2 2bit_dac
+X3 vdd vss d2 net1 net2 vout sw
+.ends
+
+
+* expanding   symbol:  /home/97ms/uci/ip/dac5v/1.schematics/2bit_dac.sym # of pins=7
+** sym_path: /home/97ms/uci/ip/dac5v/1.schematics/2bit_dac.sym
+** sch_path: /home/97ms/uci/ip/dac5v/1.schematics/2bit_dac.sch
+.subckt 2bit_dac  vdd vss vrefh vrefl d0 d1 vout
+*.iopin vdd
+*.iopin vss
+*.iopin vrefh
+*.iopin vrefl
+*.iopin d0
+*.iopin d1
+*.iopin vout
+XR1 net3 vrefh vss sky130_fd_pr__res_high_po_0p35 L=1.09 mult=1
+XR2 net4 net3 vss sky130_fd_pr__res_high_po_0p35 L=1.09 mult=1
+XR3 net5 net4 vss sky130_fd_pr__res_high_po_0p35 L=1.09 mult=1
+XR4 vrefl net5 vss sky130_fd_pr__res_high_po_0p35 L=1.09 mult=1
+X1 vdd vss d0 net3 net4 net2 sw
+X2 vdd vss d0 net5 vrefl net1 sw
+X3 vdd vss d1 net2 net1 vout sw
+.ends
+
+.end

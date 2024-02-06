@@ -1,0 +1,91 @@
+Warning: Equate pins:  cell sky130_fd_pr__pfet_01v8 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sky130_fd_pr__pfet_01v8 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__pfet_01v8         |Circuit 2: sky130_fd_pr__pfet_01v8         
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__pfet_01v8 and sky130_fd_pr__pfet_01v8 are equivalent.
+Warning: Equate pins:  cell sky130_fd_pr__nfet_01v8 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sky130_fd_pr__nfet_01v8 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__nfet_01v8         |Circuit 2: sky130_fd_pr__nfet_01v8         
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__nfet_01v8 and sky130_fd_pr__nfet_01v8 are equivalent.
+Warning: Equate pins:  cell sky130_fd_pr__res_high_po_0p35 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sky130_fd_pr__res_high_po_0p35 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__res_high_po_0p35  |Circuit 2: sky130_fd_pr__res_high_po_0p35  
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__res_high_po_0p35 and sky130_fd_pr__res_high_po_0p35 are equivalent.
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_XPYSY6 in circuit sw (1)(4 instances)
+Flattening unmatched subcell sky130_fd_pr__nfet_01v8_ZFH27D in circuit sw (1)(4 instances)
+
+Subcircuit summary:
+Circuit 1: sw                              |Circuit 2: sw                              
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__pfet_01v8 (4)                |sky130_fd_pr__pfet_01v8 (4)                
+sky130_fd_pr__nfet_01v8 (4)                |sky130_fd_pr__nfet_01v8 (4)                
+Number of devices: 8                       |Number of devices: 8                       
+Number of nets: 8                          |Number of nets: 8                          
+---------------------------------------------------------------------------------------
+Circuits match uniquely.
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: sw                              |Circuit 2: sw                              
+-------------------------------------------|-------------------------------------------
+vout                                       |vout                                       
+din                                        |din                                        
+vin1                                       |vin1                                       
+vin2                                       |vin2                                       
+vdd                                        |vdd                                        
+vss                                        |vss                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sw and sw are equivalent.
+Flattening unmatched subcell sky130_fd_pr__res_high_po_0p35_2NY7PZ in circuit x2bit_dac (1)(4 instances)
+
+Subcircuit summary:
+Circuit 1: 2bit_dac                        |Circuit 2: x2bit_dac                       
+-------------------------------------------|-------------------------------------------
+sw (3)                                     |sw (3)                                     
+sky130_fd_pr__res_high_po_0p35 (4)         |sky130_fd_pr__res_high_po_0p35 (4)         
+Number of devices: 7                       |Number of devices: 7                       
+Number of nets: 12                         |Number of nets: 12                         
+---------------------------------------------------------------------------------------
+Circuits match uniquely.
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: 2bit_dac                        |Circuit 2: x2bit_dac                       
+-------------------------------------------|-------------------------------------------
+vrefh                                      |vrefh                                      
+d1                                         |d1                                         
+vout                                       |vout                                       
+vrefl                                      |vrefl                                      
+d0                                         |d0                                         
+vss                                        |vss                                        
+vdd                                        |vdd                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes 2bit_dac and x2bit_dac are equivalent.
+Circuits match uniquely.

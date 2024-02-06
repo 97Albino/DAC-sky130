@@ -1,0 +1,60 @@
+Node INV_0
+  Net OUT
+    Pin X_XM2.D Find a path 1
+    Pin X_XM1.D Find a path 1
+  Net IN
+    Pin X_XM2.G Find a path 1
+    Pin X_XM1.G Find a path 1
+Node INV_1
+  Net OUT
+    Pin X_XM2.D Find a path 1
+    Pin X_XM1.D Find a path 1
+  Net IN
+    Pin X_XM2.G Find a path 1
+    Pin X_XM1.G Find a path 1
+Node INV_2
+  Net OUT
+    Pin X_XM2.D Find a path 1
+    Pin X_XM1.D Find a path 1
+  Net IN
+    Pin X_XM2.G Find a path 1
+    Pin X_XM1.G Find a path 1
+Node INV_3
+  Net OUT
+    Pin X_XM1.D Find a path 1
+    Pin X_XM2.D Find a path 1
+  Net IN
+    Pin X_XM1.G Find a path 1
+    Pin X_XM2.G Find a path 1
+Node SW_0
+  Net NET1
+    Pin X1.IN Find a path 1
+    Pin X2.OUT Find a path 1
+    Pin X3.OUT Find a path 1
+  Net VDD
+    Pin X1.VSS Find a path 1
+    Pin X1.N_BODY Find a path 1
+    Pin X2.VSS Find a path 1
+    Pin X2.N_BODY Find a path 1
+    Pin X3.N_BODY Find a path 1
+    Pin X4.N_BODY Find a path 1
+  Net GND
+    Pin X1.VDD Find a path 1
+    Pin X1.P_BODY Find a path 1
+    Pin X2.VDD Find a path 1
+    Pin X2.P_BODY Find a path 1
+    Pin X3.P_BODY Find a path 1
+    Pin X4.P_BODY Find a path 1
+  Net NET2
+    Pin X2.IN Find a path 1
+    Pin X4.OUT Find a path 1
+  Net VOUT
+    Pin X3.IN Find a path 1
+    Pin X4.IN Find a path 1
+  Net VIN2
+    Pin X3.VDD Find a path 1
+    Pin X4.VSS Find a path 1
+  Net VIN1
+    Pin X3.VSS Find a path 1
+    Pin X4.VDD Find a path 1
+Node 

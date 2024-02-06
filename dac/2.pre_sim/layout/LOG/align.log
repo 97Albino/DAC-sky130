@@ -1,0 +1,45 @@
+2023-06-19 23:41:07 numexpr.utils INFO : Note: NumExpr detected 40 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2023-06-19 23:41:07 numexpr.utils INFO : NumExpr defaulting to 8 threads.
+2023-06-19 23:41:09 align.main INFO : Reading netlist: /home/97ms/uci/ip/dac/2.pre_sim/sw/sw.sp subckt=SW, flat=0
+2023-06-19 23:41:09 align.compiler.compiler INFO : Starting topology identification...
+2023-06-19 23:41:09 align.compiler.user_const INFO : Reading constraint file: [PosixPath('/home/97ms/uci/ip/dac/2.pre_sim/sw/sw.const.json')]
+2023-06-19 23:41:09 align.compiler.compiler INFO : Power and ground nets not found. Power grid will not be constructed.
+2023-06-19 23:41:09 align.compiler.compiler INFO : Completed topology identification.
+2023-06-19 23:41:09 align.pnr.main INFO : Running Place & Route for SW
+2023-06-19 23:41:10 align.pnr.build_pnr_model INFO : Reading contraint json file INV.pnr.const.json
+2023-06-19 23:41:10 align.pnr.build_pnr_model INFO : Reading contraint json file SW.pnr.const.json
+2023-06-19 23:41:10 align.pnr.build_pnr_model INFO : Reading contraint json file INV.pnr.const.json
+2023-06-19 23:41:10 align.pnr.build_pnr_model INFO : Reading contraint json file SW.pnr.const.json
+2023-06-19 23:41:10 align.pnr.placer INFO : Starting bottom-up placement on INV 0
+2023-06-19 23:41:10 PnR.placer.SeqPair.SeqPair INFO : Enumerated search
+2023-06-19 23:41:10 PnR.placer.Placer.PlacementCoreAspectRatio_ILP INFO : Exhausted all permutations of seq pairs and found 1 placement solution(s)
+2023-06-19 23:41:10 align.pnr.placer INFO : Starting bottom-up placement on SW 1
+2023-06-19 23:41:10 PnR.placer.SeqPair.SeqPair INFO : Enumerated search
+2023-06-19 23:41:10 PnR.placer.Placer.PlacementCoreAspectRatio_ILP INFO : Exhausted all permutations of seq pairs and found 1 placement solution(s)
+2023-06-19 23:41:10 align.pnr.build_pnr_model INFO : Reading contraint json file INV.pnr.const.json
+2023-06-19 23:41:10 align.pnr.build_pnr_model INFO : Reading contraint json file SW.pnr.const.json
+2023-06-19 23:41:10 PnR.placer.SeqPair.SeqPair INFO : Enumerated search
+2023-06-19 23:41:10 PnR.placer.SeqPair.SeqPair INFO : Enumerated search
+2023-06-19 23:41:11 align.pnr.router INFO : Starting top_down routing on SW 1 restricted to None
+2023-06-19 23:41:11 PnR.router.Router.RouteWork INFO : GcellGlobalRouter: INV
+2023-06-19 23:41:11 PnR.router.Router.RouteWork INFO : GcellDetailRouter: INV
+2023-06-19 23:41:11 PnR.router.Router.RouteWork INFO : GcellGlobalRouter: INV
+2023-06-19 23:41:11 PnR.router.Router.RouteWork INFO : GcellDetailRouter: INV
+2023-06-19 23:41:11 PnR.router.Router.RouteWork INFO : GcellGlobalRouter: INV
+2023-06-19 23:41:11 PnR.router.Router.RouteWork INFO : GcellDetailRouter: INV
+2023-06-19 23:41:11 PnR.router.Router.RouteWork INFO : GcellGlobalRouter: INV
+2023-06-19 23:41:11 PnR.router.Router.RouteWork INFO : GcellDetailRouter: INV
+2023-06-19 23:41:11 PnR.router.Router.RouteWork INFO : GcellGlobalRouter: SW
+2023-06-19 23:41:11 PnR.router.Router.RouteWork INFO : GcellDetailRouter: SW
+2023-06-19 23:41:11 PnR.router.Router.RouteWork INFO : Create power grid: SW
+2023-06-19 23:41:11 PnR.router.Router.RouteWork INFO : Power routing SW
+2023-06-19 23:41:11 align.pnr.main INFO : OUTPUT json at /home/97ms/uci/ip/dac/2.pre_sim/layout/3_pnr/INV_0_0.json
+2023-06-19 23:41:11 align.pnr.main INFO : OUTPUT gds.json /home/97ms/uci/ip/dac/2.pre_sim/layout/3_pnr/INV_0_0.python.gds.json
+2023-06-19 23:41:11 align.pnr.main INFO : OUTPUT json at /home/97ms/uci/ip/dac/2.pre_sim/layout/3_pnr/INV_1_0.json
+2023-06-19 23:41:11 align.pnr.main INFO : OUTPUT gds.json /home/97ms/uci/ip/dac/2.pre_sim/layout/3_pnr/INV_1_0.python.gds.json
+2023-06-19 23:41:11 align.pnr.main INFO : OUTPUT json at /home/97ms/uci/ip/dac/2.pre_sim/layout/3_pnr/INV_2_0.json
+2023-06-19 23:41:11 align.pnr.main INFO : OUTPUT gds.json /home/97ms/uci/ip/dac/2.pre_sim/layout/3_pnr/INV_2_0.python.gds.json
+2023-06-19 23:41:11 align.pnr.main INFO : OUTPUT json at /home/97ms/uci/ip/dac/2.pre_sim/layout/3_pnr/INV_3_0.json
+2023-06-19 23:41:11 align.pnr.main INFO : OUTPUT gds.json /home/97ms/uci/ip/dac/2.pre_sim/layout/3_pnr/INV_3_0.python.gds.json
+2023-06-19 23:41:11 align.pnr.main INFO : OUTPUT json at /home/97ms/uci/ip/dac/2.pre_sim/layout/3_pnr/SW_0.json
+2023-06-19 23:41:11 align.pnr.main INFO : OUTPUT gds.json /home/97ms/uci/ip/dac/2.pre_sim/layout/3_pnr/SW_0.python.gds.json

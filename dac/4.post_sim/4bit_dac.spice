@@ -1,0 +1,419 @@
+* NGSPICE file created from 4bit_dac.ext - technology: sky130B
+
+.subckt sky130_fd_pr__res_high_po_0p35_2NY7PZ a_n35_109# a_n165_n671# a_n35_n541#
+X0 a_n35_n541# a_n35_109# a_n165_n671# sky130_fd_pr__res_high_po_0p35 l=1.09
+.ends
+
+.subckt sky130_fd_pr__pfet_01v8_XPYSY6 w_n246_n319# a_n50_n197# a_50_n100# a_n108_n100#
++ VSUBS
+X0 a_50_n100# a_n50_n197# a_n108_n100# w_n246_n319# sky130_fd_pr__pfet_01v8 ad=0.29 pd=2.58 as=0.29 ps=2.58 w=1 l=0.5
+C0 a_n108_n100# w_n246_n319# 0.0852f
+C1 a_50_n100# w_n246_n319# 0.0852f
+C2 w_n246_n319# a_n50_n197# 0.119f
+C3 a_50_n100# a_n108_n100# 0.0906f
+C4 a_n108_n100# a_n50_n197# 0.0163f
+C5 a_50_n100# a_n50_n197# 0.0163f
+C6 a_50_n100# VSUBS 0.0558f
+C7 a_n108_n100# VSUBS 0.0558f
+C8 a_n50_n197# VSUBS 0.179f
+C9 w_n246_n319# VSUBS 1.41f
+.ends
+
+.subckt sky130_fd_pr__nfet_01v8_ZFH27D a_50_n42# a_n210_n216# a_n108_n42# a_n50_n130#
+X0 a_50_n42# a_n50_n130# a_n108_n42# a_n210_n216# sky130_fd_pr__nfet_01v8 ad=0.122 pd=1.42 as=0.122 ps=1.42 w=0.42 l=0.5
+.ends
+
+.subckt sw din vin1 vin2 m1_688_n494# vout vdd vss m1_994_178#
+XXM1 vdd din m1_994_178# vdd vss sky130_fd_pr__pfet_01v8_XPYSY6
+XXM2 vdd m1_994_178# m1_688_n494# vdd vss sky130_fd_pr__pfet_01v8_XPYSY6
+XXM3 vdd m1_994_178# vout vin1 vss sky130_fd_pr__pfet_01v8_XPYSY6
+XXM4 vdd m1_688_n494# vin2 vout vss sky130_fd_pr__pfet_01v8_XPYSY6
+XXM5 m1_994_178# vss vss din sky130_fd_pr__nfet_01v8_ZFH27D
+XXM6 m1_688_n494# vss vss m1_994_178# sky130_fd_pr__nfet_01v8_ZFH27D
+XXM7 vout vss vin2 m1_994_178# sky130_fd_pr__nfet_01v8_ZFH27D
+XXM8 vin1 vss vout m1_688_n494# sky130_fd_pr__nfet_01v8_ZFH27D
+C0 vdd m1_688_n494# 0.182f
+C1 vdd din 0.31f
+C2 vin1 vdd 0.259f
+C3 vin2 vdd 0.147f
+C4 vout vdd 0.192f
+C5 vdd m1_994_178# 0.619f
+C6 din m1_688_n494# 0.00777f
+C7 vin1 m1_688_n494# 0.382f
+C8 vin2 m1_688_n494# 0.247f
+C9 vin1 din 5.3e-19
+C10 vout m1_688_n494# 0.374f
+C11 vin2 din 4.93e-19
+C12 vin2 vin1 0.514f
+C13 m1_994_178# m1_688_n494# 0.393f
+C14 vout vin1 -0.0258f
+C15 din m1_994_178# 0.477f
+C16 vin2 vout -0.0571f
+C17 vin1 m1_994_178# 0.154f
+C18 vin2 m1_994_178# 0.0836f
+C19 vout m1_994_178# 0.323f
+C20 m1_688_n494# vss 0.491f
+C21 din vss 0.416f
+C22 vin1 vss 0.246f
+C23 vout vss 0.195f
+C24 m1_994_178# vss 0.662f
+C25 vin2 vss 0.679f
+C26 vdd vss 4.95f
+.ends
+
+.subckt x2bit_dac vrefh d1 vout X3/vin2 X2/m1_994_178# X1/vin2 X1/vin1 X2/m1_688_n494#
++ X3/m1_994_178# vrefl vdd d0 X3/m1_688_n494# X1/m1_688_n494# X1/m1_994_178# X2/vin1
++ vss X3/vin1
+XXR1 vrefh vss X1/vin1 sky130_fd_pr__res_high_po_0p35_2NY7PZ
+XXR2 X1/vin2 vss X1/vin1 sky130_fd_pr__res_high_po_0p35_2NY7PZ
+XXR3 X1/vin2 vss X2/vin1 sky130_fd_pr__res_high_po_0p35_2NY7PZ
+XXR4 vrefl vss X2/vin1 sky130_fd_pr__res_high_po_0p35_2NY7PZ
+XX1 d0 X1/vin1 X1/vin2 X1/m1_688_n494# X3/vin1 vdd vss X1/m1_994_178# sw
+XX2 d0 X2/vin1 vrefl X2/m1_688_n494# X3/vin2 vdd vss X2/m1_994_178# sw
+XX3 d1 X3/vin1 X3/vin2 X3/m1_688_n494# vout vdd vss X3/m1_994_178# sw
+C0 X1/m1_688_n494# X3/m1_688_n494# 4.2e-20
+C1 X2/m1_688_n494# vdd 0.0636f
+C2 X2/m1_688_n494# vrefl 0.0375f
+C3 X2/m1_688_n494# X1/m1_688_n494# 0.00198f
+C4 X2/m1_688_n494# d1 0.00148f
+C5 X2/vin1 X3/m1_688_n494# 0.00351f
+C6 vdd vrefl 0.186f
+C7 vdd X1/m1_688_n494# 0.0775f
+C8 vdd d1 0.0712f
+C9 X2/m1_688_n494# X2/vin1 0.0109f
+C10 X3/vin1 X3/m1_688_n494# 0.0365f
+C11 vrefl d1 7.29e-21
+C12 X1/m1_688_n494# d1 2.7e-19
+C13 X3/m1_994_178# X3/m1_688_n494# 2.84e-32
+C14 vdd X2/vin1 0.234f
+C15 X2/m1_688_n494# X3/vin1 0.00207f
+C16 X2/vin1 vrefl 0.067f
+C17 X1/m1_688_n494# X2/vin1 8.88e-20
+C18 X2/m1_688_n494# X3/m1_994_178# 1.15e-20
+C19 X2/vin1 d1 7.58e-19
+C20 vdd X1/vin1 0.261f
+C21 vdd X3/vin1 0.313f
+C22 X3/vin2 X3/m1_688_n494# 0.0138f
+C23 X3/vin1 vrefl 0.00118f
+C24 X1/m1_688_n494# X1/vin1 0.0288f
+C25 X3/vin1 X1/m1_688_n494# 0.121f
+C26 d1 X1/vin1 1.51e-19
+C27 vdd X1/m1_994_178# 6.99e-19
+C28 X3/vin1 d1 0.0273f
+C29 X1/vin2 X3/m1_688_n494# 0.00743f
+C30 X2/m1_688_n494# X3/vin2 0.168f
+C31 X3/m1_994_178# X1/m1_688_n494# 1.06e-19
+C32 X1/m1_688_n494# X1/m1_994_178# -5.68e-32
+C33 X2/vin1 X1/vin1 0.0689f
+C34 X1/m1_994_178# d1 2.25e-20
+C35 vdd X3/vin2 0.118f
+C36 X3/vin1 X2/vin1 0.00117f
+C37 X2/m1_688_n494# d0 0.0412f
+C38 X2/m1_688_n494# X1/vin2 8.88e-20
+C39 X3/vin2 vrefl 0.111f
+C40 X3/m1_994_178# X2/vin1 5.34e-19
+C41 vout d1 -2.03e-24
+C42 X3/vin2 X1/m1_688_n494# 7.84e-19
+C43 vdd d0 0.152f
+C44 vdd X1/vin2 0.167f
+C45 X2/vin1 X1/m1_994_178# 1.78e-19
+C46 X3/vin1 X1/vin1 0.102f
+C47 X3/vin2 d1 0.012f
+C48 d0 vrefl 0.0255f
+C49 X1/vin2 vrefl 0.0763f
+C50 d0 X1/m1_688_n494# 0.0316f
+C51 X1/vin2 X1/m1_688_n494# 0.0102f
+C52 X3/m1_994_178# X3/vin1 0.0297f
+C53 X1/vin2 d1 0.00147f
+C54 X1/m1_994_178# X1/vin1 0.025f
+C55 X3/vin2 X2/vin1 0.133f
+C56 X3/vin1 X1/m1_994_178# 0.00578f
+C57 X3/vin1 vout 8.02e-19
+C58 X1/vin2 X2/vin1 0.227f
+C59 d0 X2/vin1 0.199f
+C60 X3/vin2 X1/vin1 2.23e-19
+C61 X3/vin1 X3/vin2 0.0734f
+C62 X3/m1_994_178# X3/vin2 0.0079f
+C63 d0 X1/vin1 0.0483f
+C64 X1/vin2 X1/vin1 0.167f
+C65 X3/vin1 d0 4.36e-19
+C66 X3/vin1 X1/vin2 0.157f
+C67 X3/m1_994_178# X1/vin2 0.00113f
+C68 d0 X1/m1_994_178# 0.00943f
+C69 X1/vin2 X1/m1_994_178# 0.0269f
+C70 vdd vrefh 9.92e-19
+C71 X1/vin2 X3/vin2 8.93e-19
+C72 X3/vin2 d0 4.34e-19
+C73 vdd X2/m1_994_178# 6.68e-20
+C74 X1/vin2 d0 0.177f
+C75 vrefl X2/m1_994_178# 0.0258f
+C76 d1 X2/m1_994_178# 2.92e-22
+C77 vrefh X1/vin1 0.0879f
+C78 X2/vin1 X2/m1_994_178# 0.0261f
+C79 X1/m1_994_178# X2/m1_994_178# 0.00396f
+C80 X1/vin2 vrefh 0.0964f
+C81 d0 vrefh 1.28e-19
+C82 X3/vin2 X2/m1_994_178# 0.00558f
+C83 X1/vin2 X2/m1_994_178# 1.78e-19
+C84 d0 X2/m1_994_178# 0.0126f
+C85 X2/m1_688_n494# X3/m1_688_n494# 4.77e-21
+C86 vdd X3/m1_688_n494# -0.00126f
+C87 X3/m1_688_n494# vss 0.339f
+C88 d1 vss 0.106f
+C89 vout vss 0.0395f
+C90 X3/m1_994_178# vss 0.188f
+C91 vdd vss 15.9f
+C92 X2/m1_688_n494# vss 0.339f
+C93 d0 vss 0.791f
+C94 X2/vin1 vss 0.522f
+C95 X3/vin2 vss 1.19f
+C96 X2/m1_994_178# vss 0.188f
+C97 vrefl vss 2.34f
+C98 X1/m1_688_n494# vss 0.334f
+C99 X1/vin1 vss 1.03f
+C100 X3/vin1 vss 0.605f
+C101 X1/m1_994_178# vss 0.188f
+C102 X1/vin2 vss 0.91f
+C103 vrefh vss 0.754f
+.ends
+
+.subckt x3bit_dac vrefl d0 d1 d2 vout vdd vrefh vss
+XX1 vrefh d1 X1/vout X1/X3/vin2 X1/X2/m1_994_178# X1/X1/vin2 X1/X1/vin1 X1/X2/m1_688_n494#
++ X1/X3/m1_994_178# X2/vrefh vdd d0 X1/X3/m1_688_n494# X1/X1/m1_688_n494# X1/X1/m1_994_178#
++ X1/X2/vin1 vss X1/X3/vin1 x2bit_dac
+XX2 X2/vrefh d1 X2/vout X2/X3/vin2 X2/X2/m1_994_178# X2/X1/vin2 X2/X1/vin1 X2/X2/m1_688_n494#
++ X2/X3/m1_994_178# vrefl vdd d0 X2/X3/m1_688_n494# X2/X1/m1_688_n494# X2/X1/m1_994_178#
++ X2/X2/vin1 vss X2/X3/vin1 x2bit_dac
+Xsw_0 d2 X1/vout X2/vout sw_0/m1_688_n494# vout vdd vss sw_0/m1_994_178# sw
+C0 d1 X2/vrefh 0.0738f
+C1 sw_0/m1_994_178# d1 0.00705f
+C2 X1/X3/vin2 X2/X1/m1_688_n494# 8.07e-19
+C3 X1/X2/m1_688_n494# X2/X1/vin1 8.22e-20
+C4 X2/vout vdd 0.105f
+C5 X2/X3/m1_688_n494# vdd -0.00442f
+C6 X1/X3/vin2 X1/vout 0.27f
+C7 X1/X3/vin2 X2/X3/vin1 1.22e-19
+C8 X2/vrefh X2/X1/vin2 0.00388f
+C9 X2/X1/vin1 d2 9.24e-20
+C10 X1/X3/vin2 sw_0/m1_688_n494# 0.00815f
+C11 X2/X1/vin2 d0 0.0754f
+C12 X1/vout sw_0/m1_688_n494# 1.18e-19
+C13 X1/X3/vin2 X1/X3/m1_994_178# -3.03e-19
+C14 X2/X1/vin1 vdd -0.00426f
+C15 X2/X3/vin1 sw_0/m1_688_n494# 0.00874f
+C16 X1/X3/m1_994_178# X1/vout 0.0106f
+C17 X1/X3/m1_994_178# sw_0/m1_688_n494# 2.86e-19
+C18 d1 X1/X3/m1_688_n494# 0.0316f
+C19 X1/X2/m1_994_178# vdd 5.52e-19
+C20 X2/vrefh X2/X1/m1_688_n494# 8.22e-20
+C21 sw_0/m1_994_178# X2/X1/m1_688_n494# 2.68e-20
+C22 X2/X1/m1_688_n494# d0 0.028f
+C23 X1/X3/vin2 X2/vrefh -0.0182f
+C24 sw_0/m1_994_178# X1/X3/vin2 0.00546f
+C25 X2/X3/m1_994_178# d2 3.33e-19
+C26 sw_0/m1_994_178# X1/vout 7.31e-20
+C27 X2/vrefh X2/X3/vin1 2.33e-19
+C28 sw_0/m1_994_178# X2/X3/vin1 0.00329f
+C29 X2/vout d1 0.033f
+C30 X2/X3/m1_994_178# vdd 5.31e-20
+C31 d1 X2/X3/m1_688_n494# 0.0412f
+C32 vrefh d0 1.38e-20
+C33 X2/X3/vin2 vdd -0.00176f
+C34 sw_0/m1_994_178# X1/X3/m1_994_178# 6.1e-19
+C35 X1/X2/m1_688_n494# d2 4.64e-19
+C36 X2/X1/m1_994_178# X2/vrefh 1.64e-19
+C37 X1/X2/m1_688_n494# vdd 6.35e-19
+C38 X2/X1/m1_994_178# d0 0.0069f
+C39 d2 X1/X2/vin1 6e-20
+C40 d1 X2/X1/vin1 0.0116f
+C41 vdd X1/X2/vin1 -5.68e-32
+C42 X2/vrefh X1/X1/vin2 -2.85e-19
+C43 X2/X1/vin2 X2/X3/m1_688_n494# -0.00743f
+C44 X1/X1/vin2 d0 0.0233f
+C45 X2/vrefh d0 0.818f
+C46 d2 vdd 0.0019f
+C47 X1/X3/vin2 X1/X3/m1_688_n494# -0.00934f
+C48 X1/vout X1/X3/m1_688_n494# 0.0222f
+C49 X2/X1/vin2 X2/X1/vin1 -0.0277f
+C50 X1/X3/m1_688_n494# sw_0/m1_688_n494# 4.19e-20
+C51 X1/X3/m1_994_178# X1/X3/m1_688_n494# -2.84e-32
+C52 d1 X2/X3/m1_994_178# 0.0126f
+C53 d1 X2/X3/vin2 9.56e-19
+C54 X2/vout X1/vout 3.21e-19
+C55 X2/vout X2/X3/vin1 0.221f
+C56 X2/X1/m1_688_n494# X2/X1/vin1 -0.00247f
+C57 X2/X3/vin1 X2/X3/m1_688_n494# -0.00752f
+C58 X2/vout sw_0/m1_688_n494# 1.76e-19
+C59 X2/X3/m1_688_n494# sw_0/m1_688_n494# 5.55e-20
+C60 sw_0/m1_994_178# X1/X3/m1_688_n494# 3.14e-19
+C61 X1/X3/vin2 X2/X1/vin1 5.19e-19
+C62 d1 X1/X2/vin1 0.0136f
+C63 X2/X1/vin2 X2/X3/m1_994_178# -0.00113f
+C64 d1 d2 0.0105f
+C65 d1 vdd 0.48f
+C66 X2/vout sw_0/m1_994_178# 1.78e-19
+C67 X2/X1/m1_994_178# X2/X1/vin1 -1.07e-19
+C68 sw_0/m1_994_178# X2/X3/m1_688_n494# 3.38e-19
+C69 X2/X1/m1_994_178# X1/X2/m1_994_178# 0.00396f
+C70 X1/X3/vin1 vdd 0.0298f
+C71 X2/X1/vin2 d2 7.2e-20
+C72 X1/X2/m1_688_n494# X2/X1/m1_688_n494# 0.00198f
+C73 X2/vrefh X2/X1/vin1 0.164f
+C74 X2/X1/vin2 vdd -0.0121f
+C75 X2/X3/vin1 X2/X3/m1_994_178# 2.84e-32
+C76 X2/X1/vin1 d0 0.219f
+C77 X2/X3/m1_994_178# sw_0/m1_688_n494# 3.31e-19
+C78 X2/X3/vin1 X2/X3/vin2 -2.38e-19
+C79 X2/X3/vin2 sw_0/m1_688_n494# 3.85e-19
+C80 X2/X1/m1_688_n494# d2 6.36e-19
+C81 X1/X3/vin2 X1/X2/vin1 -0.00316f
+C82 X2/X1/m1_688_n494# vdd -0.00178f
+C83 X1/X3/vin2 d2 0.00417f
+C84 X1/X3/m1_994_178# X1/X2/vin1 -5.34e-19
+C85 X1/X3/vin2 vdd 0.228f
+C86 X2/X3/vin1 d2 0.00216f
+C87 sw_0/m1_994_178# X2/X3/m1_994_178# 6.71e-19
+C88 X1/vout vdd 0.0747f
+C89 X2/X3/vin1 vdd -0.0214f
+C90 X1/X3/m1_994_178# d2 3.09e-19
+C91 sw_0/m1_688_n494# vdd 4.24e-19
+C92 d1 X1/X3/vin1 0.00177f
+C93 X1/X3/m1_994_178# vdd 6.99e-19
+C94 sw_0/m1_994_178# X1/X2/m1_688_n494# 2.95e-20
+C95 X2/vout X2/X3/m1_688_n494# 0.0187f
+C96 vrefl d0 1.55e-19
+C97 d1 X2/X1/vin2 0.0971f
+C98 X2/X2/vin1 d0 2.3e-20
+C99 X2/vrefh X1/X2/vin1 -0.033f
+C100 d0 X1/X2/vin1 0.0624f
+C101 X2/vrefh d2 6.65e-20
+C102 X1/X1/vin2 vdd -0.00292f
+C103 X2/vrefh vdd 0.0111f
+C104 sw_0/m1_994_178# vdd 7.35e-19
+C105 vdd d0 0.0544f
+C106 d1 X2/X1/m1_688_n494# 7.06e-20
+C107 d1 X1/X3/vin2 0.141f
+C108 d1 X1/vout 0.0238f
+C109 d1 X2/X3/vin1 0.12f
+C110 X1/X2/m1_994_178# X2/X1/vin1 1.64e-19
+C111 vout X1/X3/m1_688_n494# 1.52e-19
+C112 d1 sw_0/m1_688_n494# 0.0467f
+C113 d1 X1/X3/m1_994_178# 0.00943f
+C114 X2/vout X2/X3/m1_994_178# 0.011f
+C115 X1/X3/m1_688_n494# X1/X2/vin1 -0.00351f
+C116 X1/X3/vin2 X1/X3/vin1 -0.00351f
+C117 X2/vout X2/X3/vin2 0.00734f
+C118 X1/X3/vin1 X1/vout 0.00864f
+C119 X1/X3/vin2 X2/X1/vin2 3.94e-19
+C120 X1/X3/m1_688_n494# vdd 0.0893f
+C121 X2/X3/vin1 X2/X1/vin2 -0.00988f
+C122 vout X2/X3/m1_688_n494# 9.7e-20
+C123 sw_0/m1_688_n494# vss 0.34f
+C124 d2 vss 0.181f
+C125 vout vss 0.0395f
+C126 sw_0/m1_994_178# vss 0.188f
+C127 X2/X3/m1_688_n494# vss 0.43f
+C128 d1 vss 1.07f
+C129 X2/vout vss 0.705f
+C130 X2/X3/m1_994_178# vss 0.189f
+C131 vdd vss 35.7f
+C132 X2/X2/m1_688_n494# vss 0.339f
+C133 d0 vss 2.05f
+C134 X2/X2/vin1 vss 0.215f
+C135 X2/X3/vin2 vss 1.16f
+C136 X2/X2/m1_994_178# vss 0.188f
+C137 vrefl vss 1.73f
+C138 X2/X1/m1_688_n494# vss 0.339f
+C139 X2/X1/vin1 vss 0.675f
+C140 X2/X3/vin1 vss 0.628f
+C141 X2/X1/m1_994_178# vss 0.188f
+C142 X2/X1/vin2 vss 0.489f
+C143 X1/X3/m1_688_n494# vss 0.337f
+C144 X1/vout vss 0.458f
+C145 X1/X3/m1_994_178# vss 0.188f
+C146 X1/X2/m1_688_n494# vss 0.339f
+C147 X1/X2/vin1 vss 0.211f
+C148 X1/X3/vin2 vss 0.958f
+C149 X1/X2/m1_994_178# vss 0.188f
+C150 X2/vrefh vss 2.05f
+C151 X1/X1/m1_688_n494# vss 0.339f
+C152 X1/X1/vin1 vss 0.663f
+C153 X1/X3/vin1 vss 0.574f
+C154 X1/X1/m1_994_178# vss 0.188f
+C155 X1/X1/vin2 vss 0.501f
+C156 vrefh vss 0.527f
+.ends
+
+.subckt x4bit_dac vdd vss vrefh vrefl d0 d1 d2 d3 vout
+XX1 X2/vrefh d0 d1 d2 X3/vin1 vdd vrefh vss x3bit_dac
+XX2 vrefl d0 d1 d2 X3/vin2 vdd X2/vrefh vss x3bit_dac
+XX3 d3 X3/vin1 X3/vin2 X3/m1_688_n494# vout vdd vss X3/m1_994_178# sw
+C0 X3/m1_688_n494# vss 0.339f
+C1 d3 vss 0.174f
+C2 vout vss 0.0395f
+C3 X3/m1_994_178# vss 0.188f
+C4 X2/sw_0/m1_688_n494# vss 0.339f
+C5 d2 vss 0.197f
+C6 X3/vin2 vss 0.517f
+C7 X2/sw_0/m1_994_178# vss 0.188f
+C8 X2/X2/X3/m1_688_n494# vss 0.339f
+C9 X2/X2/vout vss 0.627f
+C10 X2/X2/X3/m1_994_178# vss 0.188f
+C11 vdd vss 73.8f
+C12 X2/X2/X2/m1_688_n494# vss 0.339f
+C13 X2/X2/X2/vin1 vss 0.215f
+C14 X2/X2/X3/vin2 vss 0.992f
+C15 X2/X2/X2/m1_994_178# vss 0.188f
+C16 vrefl vss 1.73f
+C17 X2/X2/X1/m1_688_n494# vss 0.339f
+C18 X2/X2/X1/vin1 vss 0.663f
+C19 X2/X2/X3/vin1 vss 0.576f
+C20 X2/X2/X1/m1_994_178# vss 0.188f
+C21 X2/X2/X1/vin2 vss 0.489f
+C22 X2/X1/X3/m1_688_n494# vss 0.339f
+C23 X2/X1/vout vss 0.367f
+C24 X2/X1/X3/m1_994_178# vss 0.188f
+C25 X2/X1/X2/m1_688_n494# vss 0.339f
+C26 X2/X1/X2/vin1 vss 0.215f
+C27 X2/X1/X3/vin2 vss 0.992f
+C28 X2/X1/X2/m1_994_178# vss 0.188f
+C29 X2/X2/vrefh vss 2.02f
+C30 X2/X1/X1/m1_688_n494# vss 0.339f
+C31 X2/X1/X1/vin1 vss 0.663f
+C32 X2/X1/X3/vin1 vss 0.576f
+C33 X2/X1/X1/m1_994_178# vss 0.188f
+C34 X2/X1/X1/vin2 vss 0.489f
+C35 X1/sw_0/m1_688_n494# vss 0.339f
+C36 X3/vin1 vss 0.226f
+C37 X1/sw_0/m1_994_178# vss 0.188f
+C38 X1/X2/X3/m1_688_n494# vss 0.339f
+C39 d1 vss 1.15f
+C40 X1/X2/vout vss 0.627f
+C41 X1/X2/X3/m1_994_178# vss 0.188f
+C42 X1/X2/X2/m1_688_n494# vss 0.339f
+C43 d0 vss 3.76f
+C44 X1/X2/X2/vin1 vss 0.215f
+C45 X1/X2/X3/vin2 vss 0.992f
+C46 X1/X2/X2/m1_994_178# vss 0.188f
+C47 X2/vrefh vss 2.25f
+C48 X1/X2/X1/m1_688_n494# vss 0.339f
+C49 X1/X2/X1/vin1 vss 0.663f
+C50 X1/X2/X3/vin1 vss 0.576f
+C51 X1/X2/X1/m1_994_178# vss 0.188f
+C52 X1/X2/X1/vin2 vss 0.489f
+C53 X1/X1/X3/m1_688_n494# vss 0.339f
+C54 X1/X1/vout vss 0.367f
+C55 X1/X1/X3/m1_994_178# vss 0.188f
+C56 X1/X1/X2/m1_688_n494# vss 0.339f
+C57 X1/X1/X2/vin1 vss 0.215f
+C58 X1/X1/X3/vin2 vss 0.992f
+C59 X1/X1/X2/m1_994_178# vss 0.188f
+C60 X1/X2/vrefh vss 2.02f
+C61 X1/X1/X1/m1_688_n494# vss 0.339f
+C62 X1/X1/X1/vin1 vss 0.663f
+C63 X1/X1/X3/vin1 vss 0.576f
+C64 X1/X1/X1/m1_994_178# vss 0.188f
+C65 X1/X1/X1/vin2 vss 0.489f
+C66 vrefh vss 0.527f
+.ends
+

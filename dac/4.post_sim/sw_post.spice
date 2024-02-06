@@ -1,0 +1,13 @@
+* SPICE3 file created from sw.ext - technology: sky130B
+
+.subckt sw vdd vss din vin1 vin2 vout
+X0 m1_994_178# din vdd vdd sky130_fd_pr__pfet_01v8 ad=0.29 pd=2.58 as=0.29 ps=2.58 w=1 l=0.5
+X1 m1_688_n494# m1_994_178# vdd vdd sky130_fd_pr__pfet_01v8 ad=0.29 pd=2.58 as=0.58 ps=5.16 w=1 l=0.5
+X2 vout m1_994_178# vin1 vdd sky130_fd_pr__pfet_01v8 ad=0.58 pd=5.16 as=0.29 ps=2.58 w=1 l=0.5
+X3 vin2 m1_688_n494# vout vdd sky130_fd_pr__pfet_01v8 ad=0.29 pd=2.58 as=0 ps=0 w=1 l=0.5
+X4 m1_994_178# din vss vss sky130_fd_pr__nfet_01v8 ad=0.122 pd=1.42 as=0.122 ps=1.42 w=0.42 l=0.5
+X5 m1_688_n494# m1_994_178# vss vss sky130_fd_pr__nfet_01v8 ad=0.122 pd=1.42 as=0.244 ps=2.84 w=0.42 l=0.5
+X6 vout m1_994_178# vin2 vss sky130_fd_pr__nfet_01v8 ad=0.244 pd=2.84 as=0.122 ps=1.42 w=0.42 l=0.5
+X7 vin1 m1_688_n494# vout vss sky130_fd_pr__nfet_01v8 ad=0.122 pd=1.42 as=0 ps=0 w=0.42 l=0.5
+C0 vdd vss 4.95f
+.ends

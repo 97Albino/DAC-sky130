@@ -1,0 +1,36 @@
+[
+  {
+    "constraint": "PowerPorts",
+    "ports": [
+      "VDD"
+    ],
+    "propagate": true
+  },
+  {
+    "constraint": "SameTemplate",
+    "instances": [
+      "X1",
+      "X2",
+      "X3",
+      "X4"
+    ]
+  },
+  {
+    "constraint": "SymmetricBlocks",
+    "pairs": [
+      [
+        "X1"
+      ],
+      [
+        "X2"
+      ],
+      [
+        "X3"
+      ],
+      [
+        "X4"
+      ]
+    ],
+    "direction": "V"
+  }
+]

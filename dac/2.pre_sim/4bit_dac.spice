@@ -1,0 +1,9 @@
+** sch_path: /home/97ms/uci/ip/dac/1.schematics/4bit_dac.sch
+
+.include 3bit_dac.spice
+
+.subckt 4bit_dac vdd vss vrefh vrefl d0 d1 d2 d3 vout
+X1 vdd vss vrefh net2 d0 d1 d2 net1 3bit_dac
+X2 vdd vss net2 vrefl d0 d1 d2 net3 3bit_dac
+X3 vdd vss d3 net1 net3 vout sw
+.ends

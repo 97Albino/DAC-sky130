@@ -1,0 +1,42 @@
+{
+  "constraints": [
+    {
+      "ports": [
+        "VDD"
+      ],
+      "propagate": true,
+      "const_name": "PowerPorts"
+    },
+    {
+      "pairs": [
+        {
+          "type": "selfsym",
+          "block": "X1"
+        },
+        {
+          "type": "selfsym",
+          "block": "X2"
+        },
+        {
+          "type": "selfsym",
+          "block": "X3"
+        },
+        {
+          "type": "selfsym",
+          "block": "X4"
+        }
+      ],
+      "const_name": "SymmBlock",
+      "axis_dir": "V"
+    },
+    {
+      "const_name": "SameTemplate",
+      "blocks": [
+        "X2",
+        "X3",
+        "X4",
+        "X1"
+      ]
+    }
+  ]
+}

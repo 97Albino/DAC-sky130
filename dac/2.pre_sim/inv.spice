@@ -1,0 +1,7 @@
+** sch_path: /home/97ms/uci/ip/dac/2.pre_sim/../1.schematics/inv.sch
+
+
+.subckt inv vdd vss in out
+XM1 out in vss vss sky130_fd_pr__nfet_01v8 L=0.5 W=0.42 nf=1
+XM2 out in vdd vdd sky130_fd_pr__pfet_01v8 L=0.5 W=1 nf=1
+.ends inv

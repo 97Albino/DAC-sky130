@@ -1,0 +1,41 @@
+* NGSPICE file created from 3bit_dac.ext - technology: sky130B
+
+.subckt sky130_fd_pr__res_high_po_0p35_2NY7PZ a_n35_109# a_n165_n671# a_n35_n541#
+X0 a_n35_n541# a_n35_109# a_n165_n671# sky130_fd_pr__res_high_po_0p35 l=1.09
+.ends
+
+.subckt sky130_fd_pr__pfet_01v8_XPYSY6 w_n246_n319# a_n50_n197# a_50_n100# a_n108_n100#
+X0 a_50_n100# a_n50_n197# a_n108_n100# w_n246_n319# sky130_fd_pr__pfet_01v8 ad=0.29 pd=2.58 as=0.29 ps=2.58 w=1 l=0.5
+.ends
+
+.subckt sky130_fd_pr__nfet_01v8_ZFH27D a_50_n42# a_n210_n216# a_n108_n42# a_n50_n130#
+X0 a_50_n42# a_n50_n130# a_n108_n42# a_n210_n216# sky130_fd_pr__nfet_01v8 ad=0.122 pd=1.42 as=0.122 ps=1.42 w=0.42 l=0.5
+.ends
+
+.subckt sw vdd din vin1 vin2 vout vss
+XXM1 vdd din m1_994_178# vdd sky130_fd_pr__pfet_01v8_XPYSY6
+XXM2 vdd m1_994_178# m1_688_n494# vdd sky130_fd_pr__pfet_01v8_XPYSY6
+XXM3 vdd m1_994_178# vout vin1 sky130_fd_pr__pfet_01v8_XPYSY6
+XXM4 vdd m1_688_n494# vin2 vout sky130_fd_pr__pfet_01v8_XPYSY6
+XXM5 m1_994_178# vss vss din sky130_fd_pr__nfet_01v8_ZFH27D
+XXM6 m1_688_n494# vss vss m1_994_178# sky130_fd_pr__nfet_01v8_ZFH27D
+XXM7 vout vss vin2 m1_994_178# sky130_fd_pr__nfet_01v8_ZFH27D
+XXM8 vin1 vss vout m1_688_n494# sky130_fd_pr__nfet_01v8_ZFH27D
+.ends
+
+.subckt x2bit_dac vrefh vrefl d1 vout vdd d0 vss
+XXR1 vrefh vss X1/vin1 sky130_fd_pr__res_high_po_0p35_2NY7PZ
+XXR2 X1/vin2 vss X1/vin1 sky130_fd_pr__res_high_po_0p35_2NY7PZ
+XXR3 X1/vin2 vss X2/vin1 sky130_fd_pr__res_high_po_0p35_2NY7PZ
+XXR4 vrefl vss X2/vin1 sky130_fd_pr__res_high_po_0p35_2NY7PZ
+XX1 vdd d0 X1/vin1 X1/vin2 X3/vin1 vss sw
+XX2 vdd d0 X2/vin1 vrefl X3/vin2 vss sw
+XX3 vdd d1 X3/vin1 X3/vin2 vout vss sw
+.ends
+
+.subckt x3bit_dac vdd vss vrefh vrefl d0 d1 d2 vout
+XX1 vrefh X2/vrefh d1 X1/vout vdd d0 vss x2bit_dac
+XX2 X2/vrefh vrefl d1 X2/vout vdd d0 vss x2bit_dac
+Xsw_0 vdd d2 X1/vout X2/vout vout vss sw
+.ends
+

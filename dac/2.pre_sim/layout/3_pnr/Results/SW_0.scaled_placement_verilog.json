@@ -1,0 +1,394 @@
+{
+  "global_signals": [],
+  "leaves": [
+    {
+      "abstract_name": "NMOS_4T_9061234_X1_Y1",
+      "bbox": [
+        0,
+        0,
+        2580,
+        7560
+      ],
+      "concrete_name": "NMOS_4T_9061234_X1_Y1",
+      "terminals": [
+        {
+          "name": "B",
+          "rect": [
+            260,
+            6580,
+            1460,
+            6860
+          ]
+        },
+        {
+          "name": "D",
+          "rect": [
+            260,
+            280,
+            1460,
+            560
+          ]
+        },
+        {
+          "name": "G",
+          "rect": [
+            260,
+            4480,
+            1460,
+            4760
+          ]
+        },
+        {
+          "name": "S",
+          "rect": [
+            690,
+            700,
+            1890,
+            980
+          ]
+        }
+      ]
+    },
+    {
+      "abstract_name": "PMOS_4T_30119592_X1_Y1",
+      "bbox": [
+        0,
+        0,
+        2580,
+        7560
+      ],
+      "concrete_name": "PMOS_4T_30119592_X1_Y1",
+      "terminals": [
+        {
+          "name": "B",
+          "rect": [
+            260,
+            6580,
+            1460,
+            6860
+          ]
+        },
+        {
+          "name": "D",
+          "rect": [
+            260,
+            280,
+            1460,
+            560
+          ]
+        },
+        {
+          "name": "G",
+          "rect": [
+            260,
+            4480,
+            1460,
+            4760
+          ]
+        },
+        {
+          "name": "S",
+          "rect": [
+            690,
+            700,
+            1890,
+            980
+          ]
+        }
+      ]
+    }
+  ],
+  "modules": [
+    {
+      "abstract_name": "INV",
+      "bbox": [
+        0,
+        0,
+        5160,
+        7560
+      ],
+      "concrete_name": "INV_0",
+      "constraints": [
+        {
+          "constraint": "PowerPorts",
+          "ports": [
+            "VSS",
+            "N_BODY"
+          ],
+          "propagate": true
+        }
+      ],
+      "instances": [
+        {
+          "abstract_template_name": "NMOS_4T_9061234_X1_Y1",
+          "concrete_template_name": "NMOS_4T_9061234_X1_Y1",
+          "fa_map": [
+            {
+              "actual": "N_BODY",
+              "formal": "B"
+            },
+            {
+              "actual": "OUT",
+              "formal": "D"
+            },
+            {
+              "actual": "IN",
+              "formal": "G"
+            },
+            {
+              "actual": "VSS",
+              "formal": "S"
+            }
+          ],
+          "instance_name": "X_XM1",
+          "transformation": {
+            "oX": 2580,
+            "oY": 0,
+            "sX": 1,
+            "sY": 1
+          }
+        },
+        {
+          "abstract_template_name": "PMOS_4T_30119592_X1_Y1",
+          "concrete_template_name": "PMOS_4T_30119592_X1_Y1",
+          "fa_map": [
+            {
+              "actual": "P_BODY",
+              "formal": "B"
+            },
+            {
+              "actual": "OUT",
+              "formal": "D"
+            },
+            {
+              "actual": "IN",
+              "formal": "G"
+            },
+            {
+              "actual": "VDD",
+              "formal": "S"
+            }
+          ],
+          "instance_name": "X_XM2",
+          "transformation": {
+            "oX": 2580,
+            "oY": 0,
+            "sX": -1,
+            "sY": 1
+          }
+        }
+      ],
+      "parameters": [
+        "OUT",
+        "IN",
+        "VDD",
+        "VSS",
+        "P_BODY",
+        "N_BODY"
+      ]
+    },
+    {
+      "abstract_name": "SW",
+      "bbox": [
+        0,
+        0,
+        5160,
+        30240
+      ],
+      "concrete_name": "SW_0",
+      "constraints": [
+        {
+          "constraint": "PowerPorts",
+          "ports": [
+            "VDD"
+          ],
+          "propagate": true
+        },
+        {
+          "constraint": "SameTemplate",
+          "instances": [
+            "X1",
+            "X2",
+            "X3",
+            "X4"
+          ]
+        },
+        {
+          "constraint": "SymmetricBlocks",
+          "direction": "V",
+          "pairs": [
+            [
+              "X1"
+            ],
+            [
+              "X2"
+            ],
+            [
+              "X3"
+            ],
+            [
+              "X4"
+            ]
+          ]
+        }
+      ],
+      "instances": [
+        {
+          "abstract_template_name": "INV",
+          "concrete_template_name": "INV_0",
+          "fa_map": [
+            {
+              "actual": "NET1",
+              "formal": "IN"
+            },
+            {
+              "actual": "VDD",
+              "formal": "N_BODY"
+            },
+            {
+              "actual": "DIGITAL_INPUT",
+              "formal": "OUT"
+            },
+            {
+              "actual": "GND",
+              "formal": "P_BODY"
+            },
+            {
+              "actual": "GND",
+              "formal": "VDD"
+            },
+            {
+              "actual": "VDD",
+              "formal": "VSS"
+            }
+          ],
+          "instance_name": "X1",
+          "transformation": {
+            "oX": 0,
+            "oY": 0,
+            "sX": 1,
+            "sY": 1
+          }
+        },
+        {
+          "abstract_template_name": "INV",
+          "concrete_template_name": "INV_0",
+          "fa_map": [
+            {
+              "actual": "NET2",
+              "formal": "IN"
+            },
+            {
+              "actual": "VDD",
+              "formal": "N_BODY"
+            },
+            {
+              "actual": "NET1",
+              "formal": "OUT"
+            },
+            {
+              "actual": "GND",
+              "formal": "P_BODY"
+            },
+            {
+              "actual": "GND",
+              "formal": "VDD"
+            },
+            {
+              "actual": "VDD",
+              "formal": "VSS"
+            }
+          ],
+          "instance_name": "X2",
+          "transformation": {
+            "oX": 0,
+            "oY": 7560,
+            "sX": 1,
+            "sY": 1
+          }
+        },
+        {
+          "abstract_template_name": "INV",
+          "concrete_template_name": "INV_0",
+          "fa_map": [
+            {
+              "actual": "VOUT",
+              "formal": "IN"
+            },
+            {
+              "actual": "VDD",
+              "formal": "N_BODY"
+            },
+            {
+              "actual": "NET1",
+              "formal": "OUT"
+            },
+            {
+              "actual": "GND",
+              "formal": "P_BODY"
+            },
+            {
+              "actual": "VIN2",
+              "formal": "VDD"
+            },
+            {
+              "actual": "VIN1",
+              "formal": "VSS"
+            }
+          ],
+          "instance_name": "X3",
+          "transformation": {
+            "oX": 0,
+            "oY": 22680,
+            "sX": 1,
+            "sY": -1
+          }
+        },
+        {
+          "abstract_template_name": "INV",
+          "concrete_template_name": "INV_0",
+          "fa_map": [
+            {
+              "actual": "VOUT",
+              "formal": "IN"
+            },
+            {
+              "actual": "VDD",
+              "formal": "N_BODY"
+            },
+            {
+              "actual": "NET2",
+              "formal": "OUT"
+            },
+            {
+              "actual": "GND",
+              "formal": "P_BODY"
+            },
+            {
+              "actual": "VIN1",
+              "formal": "VDD"
+            },
+            {
+              "actual": "VIN2",
+              "formal": "VSS"
+            }
+          ],
+          "instance_name": "X4",
+          "transformation": {
+            "oX": 5160,
+            "oY": 22680,
+            "sX": -1,
+            "sY": 1
+          }
+        }
+      ],
+      "parameters": [
+        "VDD",
+        "DIGITAL_INPUT",
+        "VIN1",
+        "VIN2",
+        "VOUT"
+      ]
+    }
+  ]
+}

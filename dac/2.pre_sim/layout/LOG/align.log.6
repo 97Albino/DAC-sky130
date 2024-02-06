@@ -1,0 +1,24 @@
+2023-06-19 23:21:22 numexpr.utils INFO : Note: NumExpr detected 40 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2023-06-19 23:21:22 numexpr.utils INFO : NumExpr defaulting to 8 threads.
+2023-06-19 23:21:24 align.main INFO : Reading netlist: /home/97ms/uci/ip/dac/2.pre_sim/sw/sw.sp subckt=SW, flat=0
+2023-06-19 23:21:24 align.compiler.compiler INFO : Starting topology identification...
+2023-06-19 23:21:24 align.compiler.user_const INFO : Reading constraint file: [PosixPath('/home/97ms/uci/ip/dac/2.pre_sim/sw/sw.const.json')]
+2023-06-19 23:21:24 align.compiler.preprocess WARNING : changing source drain: XM2
+2023-06-19 23:21:24 align.compiler.preprocess WARNING : Swapping D and S XM2 OUT VDD model='SKY130_FD_PR__PFET_01V8' name='XM2' pins={'D': 'OUT', 'G': 'IN', 'S': 'VDD', 'B': 'P_BODY'} parameters={'W': '1.05E-06', 'L': '5E-07', 'NFIN': '1', 'NF': '2', 'M': '1', 'PARALLEL': '1', 'STACK': '1'} abstract_name=None
+2023-06-19 23:21:24 align.compiler.preprocess WARNING : changing source drain: XM1
+2023-06-19 23:21:24 align.compiler.preprocess WARNING : Swapping D and S XM1 OUT VSS model='SKY130_FD_PR__NFET_01V8' name='XM1' pins={'D': 'OUT', 'G': 'IN', 'S': 'VSS', 'B': 'N_BODY'} parameters={'W': '4.2E-07', 'L': '5E-07', 'NFIN': '1', 'NF': '2', 'M': '1', 'PARALLEL': '1', 'STACK': '1'} abstract_name=None
+2023-06-19 23:21:25 align.compiler.compiler INFO : Completed topology identification.
+2023-06-19 23:21:25 align.pnr.main INFO : Running Place & Route for SW
+2023-06-19 23:21:25 align.pnr.build_pnr_model INFO : Reading contraint json file SW.pnr.const.json
+2023-06-19 23:21:25 align.pnr.build_pnr_model INFO : Reading contraint json file INV_PG0.pnr.const.json
+2023-06-19 23:21:25 align.pnr.build_pnr_model INFO : Reading contraint json file INV_PG1.pnr.const.json
+2023-06-19 23:21:25 align.pnr.build_pnr_model INFO : Reading contraint json file SW.pnr.const.json
+2023-06-19 23:21:25 align.pnr.build_pnr_model INFO : Reading contraint json file INV_PG0.pnr.const.json
+2023-06-19 23:21:25 align.pnr.build_pnr_model INFO : Reading contraint json file INV_PG1.pnr.const.json
+2023-06-19 23:21:25 align.pnr.placer INFO : Starting bottom-up placement on INV_PG0 1
+2023-06-19 23:21:25 PnR.placer.SeqPair.SeqPair INFO : Enumerated search
+2023-06-19 23:21:25 PnR.placer.Placer.PlacementCoreAspectRatio_ILP INFO : Exhausted all permutations of seq pairs and found 1 placement solution(s)
+2023-06-19 23:21:25 align.pnr.placer INFO : Starting bottom-up placement on INV_PG1 2
+2023-06-19 23:21:25 PnR.placer.SeqPair.SeqPair INFO : Enumerated search
+2023-06-19 23:21:25 PnR.placer.Placer.PlacementCoreAspectRatio_ILP INFO : Exhausted all permutations of seq pairs and found 1 placement solution(s)
+2023-06-19 23:21:25 PnR.placer.ILP_solver.updateTerminalCenter ERROR : Placer-Warning: terminal 2 is dangling; set it on origin

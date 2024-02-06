@@ -1,0 +1,94 @@
+2023-06-19 23:31:28 numexpr.utils INFO : Note: NumExpr detected 40 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2023-06-19 23:31:28 numexpr.utils INFO : NumExpr defaulting to 8 threads.
+2023-06-19 23:31:30 align.main INFO : Reading netlist: /home/97ms/uci/ip/dac/2.pre_sim/sw/sw.sp subckt=SW, flat=0
+2023-06-19 23:31:30 align.compiler.compiler INFO : Starting topology identification...
+2023-06-19 23:31:31 align.compiler.create_array_hierarchy INFO : Adding new array hierarchy ARRAY_HIER_GND elements {'X3', 'X4', 'X2', 'X1'}
+2023-06-19 23:31:31 align.compiler.create_array_hierarchy INFO : Adding new array hierarchy ARRAY_TEMPLATE elements ['X3', 'X2', 'X1']
+2023-06-19 23:31:31 align.compiler.create_array_hierarchy INFO : Adding new array hierarchy ARRAY_TEMPLATE1 elements ['X4']
+2023-06-19 23:31:31 align.compiler.compiler INFO : Power and ground nets not found. Power grid will not be constructed.
+2023-06-19 23:31:31 align.compiler.compiler INFO : Completed topology identification.
+2023-06-19 23:31:31 align.pnr.main INFO : Running Place & Route for SW
+2023-06-19 23:31:31 align.cmdline ERROR : Fatal Error. Cannot proceed
+Traceback (most recent call last):
+  File "/home/97ms/.conda/envs/py3.8/lib/python3.8/site-packages/align/cmdline.py", line 176, in parse_args
+    return schematic2layout(**vars(arguments))
+  File "/home/97ms/.conda/envs/py3.8/lib/python3.8/site-packages/align/main.py", line 192, in schematic2layout
+    variants = generate_pnr(topology_dir, primitive_dir, pdk_dir, pnr_dir, subckt, primitives=primitives, nvariants=nvariants, effort=effort,
+  File "/home/97ms/.conda/envs/py3.8/lib/python3.8/site-packages/align/pnr/main.py", line 213, in generate_pnr
+    verilog_d = VerilogJsonTop.parse_file(topology_dir / verilog_file)
+  File "pydantic/main.py", line 569, in pydantic.main.BaseModel.parse_file
+  File "pydantic/main.py", line 526, in pydantic.main.BaseModel.parse_obj
+  File "/home/97ms/.conda/envs/py3.8/lib/python3.8/site-packages/align/schema/types.py", line 75, in __init__
+    super().__init__(*args, **kwargs)
+  File "pydantic/main.py", line 341, in pydantic.main.BaseModel.__init__
+pydantic.error_wrappers.ValidationError: 35 validation errors for VerilogJsonTop
+modules -> __root__ -> 1 -> constraint
+  Unexpected `constraint` SameTemplate (expected Order) (type=assertion_error)
+modules -> __root__ -> 1 -> constraint
+  Unexpected `constraint` SameTemplate (expected Align) (type=assertion_error)
+modules -> __root__ -> 1 -> constraint
+  Unexpected `constraint` SameTemplate (expected Floorplan) (type=assertion_error)
+modules -> __root__ -> 1 -> constraint
+  Unexpected `constraint` SameTemplate (expected Spread) (type=assertion_error)
+modules -> __root__ -> 1 -> constraint
+  Unexpected `constraint` SameTemplate (expected AssignBboxVariables) (type=assertion_error)
+modules -> __root__ -> 1 -> constraint
+  Unexpected `constraint` SameTemplate (expected AspectRatio) (type=assertion_error)
+modules -> __root__ -> 1 -> constraint
+  Unexpected `constraint` SameTemplate (expected Boundary) (type=assertion_error)
+modules -> __root__ -> 1 -> constraint
+  Unexpected `constraint` SameTemplate (expected AlignInOrder) (type=assertion_error)
+modules -> __root__ -> 1 -> constraint
+  Unexpected `constraint` SameTemplate (expected CompactPlacement) (type=assertion_error)
+modules -> __root__ -> 1 -> constraint
+  Unexpected `constraint` SameTemplate (expected Generator) (type=assertion_error)
+modules -> __root__ -> 1 -> constraint -> instances
+  Instance X1 not found in the circuit (type=assertion_error)
+modules -> __root__ -> 1 -> constraint
+  Unexpected `constraint` SameTemplate (expected GroupBlocks) (type=assertion_error)
+modules -> __root__ -> 1 -> constraint
+  Unexpected `constraint` SameTemplate (expected PlaceCloser) (type=assertion_error)
+modules -> __root__ -> 1 -> constraint
+  Unexpected `constraint` SameTemplate (expected PlaceOnBoundary) (type=assertion_error)
+modules -> __root__ -> 1 -> constraint
+  Unexpected `constraint` SameTemplate (expected DoNotIdentify) (type=assertion_error)
+modules -> __root__ -> 1 -> constraint
+  Unexpected `constraint` SameTemplate (expected PlaceOnGrid) (type=assertion_error)
+modules -> __root__ -> 1 -> constraint
+  Unexpected `constraint` SameTemplate (expected BlockDistance) (type=assertion_error)
+modules -> __root__ -> 1 -> constraint
+  Unexpected `constraint` SameTemplate (expected HorizontalDistance) (type=assertion_error)
+modules -> __root__ -> 1 -> constraint
+  Unexpected `constraint` SameTemplate (expected VerticalDistance) (type=assertion_error)
+modules -> __root__ -> 1 -> constraint
+  Unexpected `constraint` SameTemplate (expected GuardRing) (type=assertion_error)
+modules -> __root__ -> 1 -> constraint
+  Unexpected `constraint` SameTemplate (expected SymmetricBlocks) (type=assertion_error)
+modules -> __root__ -> 1 -> constraint
+  Unexpected `constraint` SameTemplate (expected GroupCaps) (type=assertion_error)
+modules -> __root__ -> 1 -> constraint
+  Unexpected `constraint` SameTemplate (expected NetConst) (type=assertion_error)
+modules -> __root__ -> 1 -> constraint
+  Unexpected `constraint` SameTemplate (expected PortLocation) (type=assertion_error)
+modules -> __root__ -> 1 -> constraint
+  Unexpected `constraint` SameTemplate (expected SymmetricNets) (type=assertion_error)
+modules -> __root__ -> 1 -> constraint
+  Unexpected `constraint` SameTemplate (expected MultiConnection) (type=assertion_error)
+modules -> __root__ -> 1 -> constraint
+  Unexpected `constraint` SameTemplate (expected DoNotRoute) (type=assertion_error)
+modules -> __root__ -> 1 -> constraint
+  Unexpected `constraint` SameTemplate (expected PowerPorts) (type=assertion_error)
+modules -> __root__ -> 1 -> constraint
+  Unexpected `constraint` SameTemplate (expected GroundPorts) (type=assertion_error)
+modules -> __root__ -> 1 -> constraint
+  Unexpected `constraint` SameTemplate (expected ClockPorts) (type=assertion_error)
+modules -> __root__ -> 1 -> constraint
+  Unexpected `constraint` SameTemplate (expected DoNotUseLib) (type=assertion_error)
+modules -> __root__ -> 1 -> constraint
+  Unexpected `constraint` SameTemplate (expected ConfigureCompiler) (type=assertion_error)
+modules -> __root__ -> 1 -> constraint
+  Unexpected `constraint` SameTemplate (expected NetPriority) (type=assertion_error)
+modules -> __root__ -> 1 -> constraint
+  Unexpected `constraint` SameTemplate (expected Route) (type=assertion_error)
+modules -> __root__ -> 1 -> constraint
+  Unexpected `constraint` SameTemplate (expected ChargeFlow) (type=assertion_error)

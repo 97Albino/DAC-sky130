@@ -1,0 +1,22 @@
+2023-06-19 23:09:40 numexpr.utils INFO : Note: NumExpr detected 40 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2023-06-19 23:09:40 numexpr.utils INFO : NumExpr defaulting to 8 threads.
+2023-06-19 23:09:42 align.main INFO : Reading netlist: /home/97ms/uci/ip/dac/2.pre_sim/sw/sw.sp subckt=SW, flat=0
+2023-06-19 23:09:42 align.compiler.compiler INFO : Starting topology identification...
+2023-06-19 23:09:43 align.compiler.create_array_hierarchy INFO : Adding new array hierarchy ARRAY_HIER_GND elements {'X2', 'X4', 'X1', 'X3'}
+2023-06-19 23:09:43 align.compiler.create_array_hierarchy INFO : Adding new array hierarchy ARRAY_TEMPLATE elements ['X2', 'X1', 'X3']
+2023-06-19 23:09:43 align.compiler.create_array_hierarchy INFO : Adding new array hierarchy ARRAY_TEMPLATE1 elements ['X4']
+2023-06-19 23:09:43 align.compiler.compiler INFO : Power and ground nets not found. Power grid will not be constructed.
+2023-06-19 23:09:43 align.compiler.compiler INFO : Completed topology identification.
+2023-06-19 23:09:43 align.cmdline ERROR : Fatal Error. Cannot proceed
+Traceback (most recent call last):
+  File "/home/97ms/.conda/envs/py3.8/lib/python3.8/site-packages/align/cmdline.py", line 176, in parse_args
+    return schematic2layout(**vars(arguments))
+  File "/home/97ms/.conda/envs/py3.8/lib/python3.8/site-packages/align/main.py", line 181, in schematic2layout
+    primitives = generate_primitives(primitive_lib, pdk_dir, primitive_dir, netlist_dir)
+  File "/home/97ms/.conda/envs/py3.8/lib/python3.8/site-packages/align/primitive/main.py", line 144, in generate_primitives
+    generate_primitive_param(primitive, primitives, pdk_dir)
+  File "/home/97ms/.conda/envs/py3.8/lib/python3.8/site-packages/align/primitive/main.py", line 165, in generate_primitive_param
+    rc = modules.gen_param(subckt, primitives, pdk_dir)
+  File "/home/97ms/uci/ALIGN-public/pdks/SKY130_PDK/gen_param.py", line 134, in gen_param
+    assert int(mvalues[key]["NF"]) % 2 == 0, f"NF must be even for device {key}:{mvalues[key]['NF']} in {name}"
+NameError: name 'name' is not defined

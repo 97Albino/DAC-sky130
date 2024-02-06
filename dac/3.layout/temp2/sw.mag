@@ -1,0 +1,185 @@
+magic
+tech sky130B
+magscale 1 2
+timestamp 1687759496
+<< nwell >>
+rect -60 0 1524 540
+<< poly >>
+rect 94 -78 194 19
+rect 94 -140 110 -78
+rect 178 -140 194 -78
+rect 94 -216 194 -140
+rect 506 -78 606 10
+rect 506 -140 522 -78
+rect 590 -140 606 -78
+rect 506 -200 606 -140
+rect 918 -78 1018 10
+rect 918 -140 934 -78
+rect 1002 -140 1018 -78
+rect 918 -200 1018 -140
+rect 1330 -78 1430 10
+rect 1330 -140 1346 -78
+rect 1414 -140 1430 -78
+rect 1330 -200 1430 -140
+<< polycont >>
+rect 110 -140 178 -78
+rect 522 -140 590 -78
+rect 934 -140 1002 -78
+rect 1346 -140 1414 -78
+<< locali >>
+rect 94 -78 194 -62
+rect 94 -140 110 -78
+rect 178 -140 194 -78
+rect 94 -156 194 -140
+rect 506 -78 606 -60
+rect 506 -140 522 -78
+rect 590 -140 606 -78
+rect 506 -156 606 -140
+rect 918 -78 1018 -60
+rect 918 -140 934 -78
+rect 1002 -140 1018 -78
+rect 918 -156 1018 -140
+rect 1330 -78 1430 -62
+rect 1330 -140 1346 -78
+rect 1414 -140 1430 -78
+rect 1330 -156 1430 -140
+<< viali >>
+rect 110 -140 178 -78
+rect 522 -140 590 -78
+rect 934 -140 1002 -78
+rect 1346 -140 1414 -78
+<< metal1 >>
+rect -32 440 460 520
+rect -32 300 48 440
+rect -32 100 88 300
+rect 118 58 170 342
+rect 380 300 460 440
+rect 792 510 1630 520
+rect 792 450 1560 510
+rect 1620 450 1630 510
+rect 792 440 1630 450
+rect 200 100 320 300
+rect 380 100 500 300
+rect 240 -68 320 100
+rect 530 58 582 342
+rect 792 300 872 440
+rect 612 288 732 300
+rect 612 112 660 288
+rect 720 112 732 288
+rect 612 100 732 112
+rect 792 100 912 300
+rect 942 58 994 342
+rect 1024 100 1324 300
+rect -32 -78 194 -68
+rect -32 -140 110 -78
+rect 178 -140 194 -78
+rect -32 -148 194 -140
+rect 240 -78 1018 -68
+rect 240 -140 522 -78
+rect 590 -140 934 -78
+rect 1002 -140 1018 -78
+rect 240 -148 1018 -140
+rect -32 -372 88 -288
+rect -32 -512 48 -372
+rect 118 -404 170 -256
+rect 240 -288 320 -148
+rect 200 -372 320 -288
+rect 380 -372 500 -288
+rect 380 -512 460 -372
+rect 530 -404 582 -256
+rect 612 -300 732 -288
+rect 612 -360 660 -300
+rect 720 -360 732 -300
+rect 612 -372 732 -360
+rect 792 -372 912 -288
+rect -32 -592 460 -512
+rect 792 -512 872 -372
+rect 942 -404 994 -256
+rect 1120 -288 1240 100
+rect 1356 58 1408 342
+rect 1436 100 1780 300
+rect 1334 -78 1520 -72
+rect 1334 -140 1346 -78
+rect 1414 -80 1520 -78
+rect 1414 -140 1450 -80
+rect 1510 -140 1520 -80
+rect 1334 -148 1520 -140
+rect 1070 -372 1278 -288
+rect 1354 -404 1406 -256
+rect 1436 -300 1636 -288
+rect 1436 -360 1560 -300
+rect 1620 -360 1636 -300
+rect 1436 -372 1636 -360
+rect 1700 -512 1780 100
+rect 792 -592 1780 -512
+<< via1 >>
+rect 1560 450 1620 510
+rect 660 112 720 288
+rect 660 -360 720 -300
+rect 1450 -140 1510 -80
+rect 1560 -360 1620 -300
+<< metal2 >>
+rect 1550 510 1630 520
+rect 1550 450 1560 510
+rect 1620 450 1630 510
+rect 652 288 732 300
+rect 652 112 660 288
+rect 720 112 732 288
+rect 652 -70 732 112
+rect 652 -80 1510 -70
+rect 652 -140 1450 -80
+rect 652 -154 1510 -140
+rect 652 -300 732 -154
+rect 652 -360 660 -300
+rect 720 -360 732 -300
+rect 652 -370 732 -360
+rect 1550 -300 1630 450
+rect 1550 -360 1560 -300
+rect 1620 -360 1630 -300
+rect 1550 -370 1630 -360
+use sky130_fd_pr__pfet_01v8_XPG7Y6  XM1
+timestamp 1687754106
+transform 1 0 144 0 1 200
+box -144 -200 144 200
+use sky130_fd_pr__pfet_01v8_XPG7Y6  XM2
+timestamp 1687754106
+transform 1 0 556 0 1 200
+box -144 -200 144 200
+use sky130_fd_pr__pfet_01v8_XPG7Y6  XM3
+timestamp 1687754106
+transform 1 0 968 0 1 200
+box -144 -200 144 200
+use sky130_fd_pr__pfet_01v8_XPG7Y6  XM4
+timestamp 1687754106
+transform 1 0 1380 0 1 200
+box -144 -200 144 200
+use sky130_fd_pr__nfet_01v8_J3M27M  XM5
+timestamp 1687754370
+transform 1 0 144 0 1 -330
+box -108 -130 108 130
+use sky130_fd_pr__nfet_01v8_J3M27M  XM6
+timestamp 1687754370
+transform 1 0 556 0 1 -330
+box -108 -130 108 130
+use sky130_fd_pr__nfet_01v8_J3M27M  XM7
+timestamp 1687754370
+transform 1 0 968 0 1 -330
+box -108 -130 108 130
+use sky130_fd_pr__nfet_01v8_J3M27M  XM8
+timestamp 1687754370
+transform 1 0 1380 0 1 -330
+box -108 -130 108 130
+<< labels >>
+flabel metal1 -32 440 48 520 0 FreeSans 256 0 0 0 vdd
+port 0 nsew
+flabel metal1 -32 -592 48 -512 0 FreeSans 256 0 0 0 vss
+port 1 nsew
+flabel metal1 1140 -280 1220 -200 0 FreeSans 256 0 0 0 vout
+port 5 nsew
+flabel metal1 1140 -592 1220 -512 0 FreeSans 256 0 0 0 vin2
+port 4 nsew
+flabel metal1 1140 440 1220 520 0 FreeSans 256 0 0 0 vin1
+port 3 nsew
+flabel metal1 -32 -148 48 -68 0 FreeSans 256 0 0 0 din
+port 2 nsew
+<< end >>

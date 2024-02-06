@@ -1,0 +1,36 @@
+[
+  {
+    "constraint": "PowerPorts",
+    "ports": [
+      "VSS",
+      "N_BODY"
+    ],
+    "propagate": true
+  },
+  {
+    "constraint": "GroupBlocks",
+    "instance_name": "X_XM1",
+    "instances": [
+      "XM1"
+    ],
+    "template_name": "NMOS_4T",
+    "generator": {
+      "name": "MOS",
+      "parameters": null
+    },
+    "constraints": null
+  },
+  {
+    "constraint": "GroupBlocks",
+    "instance_name": "X_XM2",
+    "instances": [
+      "XM2"
+    ],
+    "template_name": "PMOS_4T",
+    "generator": {
+      "name": "MOS",
+      "parameters": null
+    },
+    "constraints": null
+  }
+]

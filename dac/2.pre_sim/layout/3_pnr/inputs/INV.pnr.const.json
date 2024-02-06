@@ -1,0 +1,12 @@
+{
+  "constraints": [
+    {
+      "ports": [
+        "VSS",
+        "N_BODY"
+      ],
+      "propagate": true,
+      "const_name": "PowerPorts"
+    }
+  ]
+}
